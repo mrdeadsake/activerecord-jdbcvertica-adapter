@@ -4,7 +4,7 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: alpine:3.7
+      - image: jbfavre/vertica:latest
     steps:
       - checkout
       - run:
