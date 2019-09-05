@@ -8,10 +8,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Step One
-          command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
+          name: Bundle Install
+          command: bundle install
 
 
 
