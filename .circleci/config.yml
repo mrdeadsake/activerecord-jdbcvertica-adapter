@@ -6,14 +6,14 @@ jobs:
     docker:
       - image: circleci/jruby:9.1.17.0-jdk
         environment:
-          BUNDLER_VERSION: 1.17.3
+          BUNDLER_VERSION: 2.0.2
       - image: jbfavre/vertica:latest
     steps:
       - checkout
       - run:
           name: Configure Bundler
           command: |
-            gem install bundler -v 1.17.3
+            gem install bundler -v 2.0.2
       - run:
           name: Bundle Install
           command: |
