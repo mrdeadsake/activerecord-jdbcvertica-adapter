@@ -16,6 +16,7 @@ jobs:
           DATABASE_PORT: 5433
     steps:
       - checkout
+      - run: apt-get install -y sudo
       - run:
           name: Configure Bundler
           command: |
