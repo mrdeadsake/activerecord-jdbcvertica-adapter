@@ -10,6 +10,9 @@ jobs:
       - run:
           name: Bundle Install
           command: bundle install
+      - run:
+          name: tests
+          command: bx rake test
 
 
 

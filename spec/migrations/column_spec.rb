@@ -48,7 +48,7 @@ describe ColumnKing do
       }.must_raise(ActiveRecord::StatementInvalid)
     end
 
-    it "creates :integer columns" do
+    it "creates :integer columns as bigint" do
       connection.add_column(:kings, :queen_id, :integer)
       has_column?(:queen_id).must_equal(true)
       has_column_typed?(:queen_id, /int/i).must_equal(true)

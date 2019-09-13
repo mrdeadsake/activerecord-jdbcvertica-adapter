@@ -19,7 +19,8 @@ Gem::Specification.new do |gem|
   gem.licenses      = [ "MIT" ]
 
   gem.add_dependency "activerecord"
-  gem.add_dependency "activerecord-jdbc-adapter"
+  gem.add_dependency "activerecord-jdbc-adapter", "< 50"
+  gem.add_dependency "rails", "< 5.0"
 
   gem.add_development_dependency "bundler"
   gem.add_development_dependency "mocha"
