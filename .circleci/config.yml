@@ -6,7 +6,7 @@ jobs:
     docker:
       - image: circleci/jruby:9.1.17.0-jdk
         environment:
-          BUNDLER_VERSION: 2.0.2
+          BUNDLER_VERSION: 1.17.3
       - image: jbfavre/vertica:latest
         environment:
           DATABASE_ADAPTER: vertica5
@@ -19,14 +19,12 @@ jobs:
       - run:
           name: Configure Bundler
           command: |
-            gem install bundler -v 2.0.2
+            gem install bundler -v 1.17.3
       - run:
           name: Bundle Install
           command: |
             bundle install
       - run:
           name: tests
-          environment:
-
           command: |
             bundle exec rake test
