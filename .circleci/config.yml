@@ -16,11 +16,14 @@ jobs:
           DATABASE_PORT: 5433
     steps:
       - checkout
-      - run: apt-get install -y sudo
       - run:
           name: Configure Bundler
           command: |
-            sudo gem install bundler -v 1.17.3
+            gem install bundler -v 1.17.3
+      - run:
+          name: Uninstall bundler
+          command: |
+            gem uninstall bundler -v 2.0.2
       - run:
           name: Bundle Install
           command: |
