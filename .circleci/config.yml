@@ -8,6 +8,12 @@ jobs:
         environment:
           BUNDLER_VERSION: 2.0.2
       - image: jbfavre/vertica:latest
+        environment:
+          DATABASE_ADAPTER: vertica5
+          DATABASE_USERNAME: dbadmin
+          DATABASE_NAME: docker
+          DATABASE_HOST: 127.0.0.1
+          DATABASE_PORT: 5433
     steps:
       - checkout
       - run:
@@ -20,5 +26,7 @@ jobs:
             bundle install
       - run:
           name: tests
+          environment:
+
           command: |
             bundle exec rake test
