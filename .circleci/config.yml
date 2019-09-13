@@ -19,7 +19,7 @@ jobs:
       - run:
           name: Configure Bundler
           command: |
-            gem install bundler -v 1.17.3
+            sudo gem install bundler -v 1.17.3
       - run:
           name: Bundle Install
           command: |
