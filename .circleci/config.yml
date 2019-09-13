@@ -21,9 +21,9 @@ jobs:
           command: |
             gem install bundler -v 1.17.3
       - run:
-          name: Uninstall bundler
+          name: show bundler
           command: |
-            gem uninstall bundler -v 2.0.2
+            - bundle show bundler
       - run:
           name: Bundle Install
           command: |
