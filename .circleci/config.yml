@@ -21,10 +21,6 @@ jobs:
           command: |
             gem install bundler -v 1.17.3
       - run:
-          name: show bundler
-          command: |
-            - bundle show bundler
-      - run:
           name: Bundle Install
           command: |
             bundle install
